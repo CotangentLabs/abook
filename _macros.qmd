@@ -1,8 +1,8 @@
 <!--
-Shared math macros. Included at the top of every chapter via
-  {{< include /_macros.qmd >}}
-The HTML block feeds KaTeX/MathJax; the LaTeX block feeds the PDF preamble.
-Keep the two lists in sync. Add sparingly — macros you will actually reuse.
+Shared math macros, pulled into every chapter with an include shortcode
+(see CONVENTIONS.md). Do NOT write that shortcode literally in this file —
+it would make the file include itself. The HTML block feeds KaTeX/MathJax;
+the LaTeX block feeds the PDF preamble. Keep the two lists in sync.
 -->
 
 ```{=html}
