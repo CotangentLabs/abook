@@ -1,32 +1,52 @@
 /*-- scss:defaults --*/
-$font-family-sans-serif: "Inter", system-ui, -apple-system, sans-serif !default;
-$font-family-serif: "Georgia", "Iowan Old Style", "Palatino", serif !default;
-$font-family-monospace: "JetBrains Mono", "SFMono-Regular", ui-monospace, monospace !default;
+// Warm dark counterpart to the classic-textbook light theme.
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
 
-$body-bg: #16161a !default;
-$body-color: #e6e6e6 !default;
-$link-color: #e0a89e !default;   // washed oxblood for contrast on dark
-$primary: $link-color !default;
+$serif-stack: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+$font-family-serif: $serif-stack !default;
+$font-family-sans-serif: $serif-stack !default;
+$font-family-monospace: "JetBrains Mono", "SFMono-Regular", ui-monospace, Menlo, monospace !default;
+
+$paper:  #201d18;   // warm charcoal
+$ink:    #e7ded0;   // warm cream
+$tan:    #d9a86b;   // warm accent (brown reads muddy on dark)
+$rule:   #3a352c;
+$panel:  #2a2620;
+
+$body-bg: $paper !default;
+$body-color: $ink !default;
+$link-color: $tan !default;
+$primary: $tan !default;
+$headings-font-weight: 600 !default;
 
 /*-- scss:rules --*/
 body {
-  font-family: $font-family-serif;
-  font-size: 1.05rem;
-  line-height: 1.6;
+  background-color: $paper;
+  color: $ink;
+  font-family: $serif-stack;
+  font-size: 1.075rem;
+  line-height: 1.7;
 }
 
-h1, h2, h3, h4, h5, .sidebar, .toc {
-  font-family: $font-family-sans-serif;
-  letter-spacing: -0.01em;
+h1, h2, h3, h4, h5, .sidebar, .toc, .quarto-title-block {
+  font-family: $serif-stack;
 }
+h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.003em; }
+h1 { font-weight: 700; }
 
-.column-margin {
-  font-size: 0.82rem;
-  line-height: 1.4;
-  color: #b9b9b9;
+a { color: $tan; text-decoration-thickness: 0.5px; text-underline-offset: 2px; }
+a:hover { color: lighten($tan, 8%); }
+
+.column-margin { font-size: 0.8rem; line-height: 1.45; color: #a99f8d; }
+
+.theorem, .definition, .lemma, .corollary, div.callout {
+  border-left: 3px solid $tan;
 }
-
 .theorem, .definition, .lemma, .corollary {
-  border-left: 3px solid $primary;
-  padding-left: 1rem;
+  background: $panel;
+  padding: 0.6rem 1rem;
+  border-radius: 0 4px 4px 0;
 }
+
+hr { border-top: 1px solid $rule; }
+div.sourceCode, pre.sourceCode { border-radius: 4px; }

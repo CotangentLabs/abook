@@ -63,7 +63,7 @@ crossref:
 format:
   html:
     theme:
-      light: [cosmo, theme.scss]
+      light: [sandstone, theme.scss]
       dark: [darkly, theme-dark.scss]
     toc: true
     toc-depth: 2

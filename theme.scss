@@ -1,33 +1,61 @@
 /*-- scss:defaults --*/
-// Light theme. Serif body for a textbook feel, sans headings, mono code.
-$font-family-sans-serif: "Inter", system-ui, -apple-system, sans-serif !default;
-$font-family-serif: "Georgia", "Iowan Old Style", "Palatino", serif !default;
-$font-family-monospace: "JetBrains Mono", "SFMono-Regular", ui-monospace, monospace !default;
+// Classic-textbook light theme (sandstone base). Serif throughout,
+// warm paper ground, muted book-brown accent.
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
 
-$body-color: #1a1a1a !default;
-$link-color: #7b2d26 !default;   // muted oxblood — bookish
-$primary: $link-color !default;
+$serif-stack: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+$font-family-serif: $serif-stack !default;
+$font-family-sans-serif: $serif-stack !default;   // serif everywhere, incl. sidebar/headings
+$font-family-monospace: "JetBrains Mono", "SFMono-Regular", ui-monospace, Menlo, monospace !default;
+
+$paper:  #faf7f0;   // warm off-white
+$ink:    #302b24;   // warm near-black
+$brown:  #955e3b;   // muted book-brown accent
+$rule:   #d8cfbd;   // hairline dividers
+$panel:  #f3ede1;   // callout / theorem ground
+
+$body-bg: $paper !default;
+$body-color: $ink !default;
+$link-color: $brown !default;
+$primary: $brown !default;
+$headings-font-weight: 600 !default;
 
 /*-- scss:rules --*/
+// Hardcode the load-bearing look so it survives Bootswatch var precedence.
 body {
-  font-family: $font-family-serif;
-  font-size: 1.05rem;
-  line-height: 1.6;
+  background-color: $paper;
+  color: $ink;
+  font-family: $serif-stack;
+  font-size: 1.075rem;
+  line-height: 1.7;
 }
 
-h1, h2, h3, h4, h5, .sidebar, .toc {
-  font-family: $font-family-sans-serif;
-  letter-spacing: -0.01em;
+h1, h2, h3, h4, h5, .sidebar, .toc, .quarto-title-block {
+  font-family: $serif-stack;
 }
+h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.003em; }
+h1 { font-weight: 700; }
 
-// Tighten margin notes into a quieter, smaller register.
-.column-margin {
-  font-size: 0.82rem;
-  line-height: 1.4;
+// Chapter title a touch grander.
+#title-block-header .title { font-weight: 700; }
+
+// Links: quiet, thin underline.
+a { color: $brown; text-decoration-thickness: 0.5px; text-underline-offset: 2px; }
+a:hover { color: darken($brown, 12%); }
+
+// Margin notes: smaller, softer.
+.column-margin { font-size: 0.8rem; line-height: 1.45; color: #6b6357; }
+
+// Theorem-like environments: warm panel with a brown rule.
+.theorem, .definition, .lemma, .corollary, div.callout {
+  border-left: 3px solid $brown;
 }
-
-// Theorem-like environments get a left rule.
 .theorem, .definition, .lemma, .corollary {
-  border-left: 3px solid $primary;
-  padding-left: 1rem;
+  background: $panel;
+  padding: 0.6rem 1rem;
+  border-radius: 0 4px 4px 0;
 }
+
+// Thin classic dividers; softer code panels.
+hr { border-top: 1px solid $rule; }
+div.sourceCode, pre.sourceCode { border-radius: 4px; }
