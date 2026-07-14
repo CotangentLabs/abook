@@ -17,10 +17,10 @@ quarto render --to pdf    # PDF (run `quarto install tinytex` once)
 
 ```sh
 uv sync --group render    # env + notebook/plot tooling
-uv run pytest             # test src/thebook/
+uv run pytest             # test src/abook/
 ```
 
-Book listings are static and quoted from `src/thebook/`; that package is the
+Book listings are static and quoted from `src/abook/`; that package is the
 runnable version.
 
 ## Layout
@@ -31,7 +31,7 @@ _macros.qmd     shared math macros (HTML + PDF)
 index.qmd       preface
 chapters/       one .qmd per chapter
 appendices/     notation, math background, code tour
-src/thebook/    runnable companion package
+src/abook/    runnable companion package
 ```
 
 See [`CONVENTIONS.md`](CONVENTIONS.md) for markup house style.

@@ -37,10 +37,10 @@ Prefixes: `def-` definition, `thm-` theorem, `lem-` lemma, `cor-` corollary,
 ## Code
 
 Book code is **static and for reading** — plain fenced ```python blocks, kept
-short. The runnable version lives in `src/thebook/`; reference it by path so
+short. The runnable version lives in `src/abook/`; reference it by path so
 readers can find it:
 
-> The full implementation is in `src/thebook/attention.py`.
+> The full implementation is in `src/abook/attention.py`.
 
 Only use executable ```{python}``` cells for figures/plots generated at render
 time, and keep them cheap (they run on every build unless cached).

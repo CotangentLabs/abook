@@ -28,7 +28,7 @@
 ## Byte-pair encoding
 
 <!-- The BPE algorithm: iterative merging of frequent pairs. Worked small
-     example. Reference: `src/thebook/tokenizer.py`. -->
+     example. Reference: `src/abook/tokenizer.py`. -->
 
 ## Alternatives
 

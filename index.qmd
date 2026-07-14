@@ -28,7 +28,7 @@ Keep it short. Suggested beats below — write them in your own voice.
 
 ## The companion code {.unnumbered}
 
-<!-- The `thebook` package: static listings in the text, runnable in src/.
+<!-- The `abook` package: static listings in the text, runnable in src/.
      One paragraph on how to run it (uv sync). See Appendix C. -->
 
 ## Acknowledgements {.unnumbered}

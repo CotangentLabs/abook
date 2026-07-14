@@ -22,7 +22,7 @@
 ## Scaled dot-product attention
 
 <!-- The softmax(QK^T / sqrt(d_k)) V formula; derive the 1/sqrt(d_k) scaling.
-     Reference: `src/thebook/attention.py`. -->
+     Reference: `src/abook/attention.py`. -->
 
 ## Multi-head attention
 

@@ -8,7 +8,7 @@ book:
   # author: "Jeff Pike"
   date: today
   search: true
-  repo-url: https://github.com/USER/thebook
+  repo-url: https://github.com/CotangentLabs/abook
   repo-actions: [edit, source, issue]
   page-navigation: true
   reader-mode: true

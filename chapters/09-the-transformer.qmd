@@ -22,7 +22,7 @@
 ## The full model
 
 <!-- Embedding -> N blocks -> final norm -> LM head. Weight tying revisited.
-     Reference: `src/thebook/model.py`. -->
+     Reference: `src/abook/model.py`. -->
 
 ## Parameter and FLOP budget
 

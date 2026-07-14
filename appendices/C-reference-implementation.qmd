@@ -2,7 +2,7 @@
 
 # The Reference Implementation {#sec-reference-implementation}
 
-<!-- A guided tour of `src/thebook/`, the runnable companion to the text.
+<!-- A guided tour of `src/abook/`, the runnable companion to the text.
      Each module maps to a strand of the book. -->
 
 ## Layout {.unnumbered}

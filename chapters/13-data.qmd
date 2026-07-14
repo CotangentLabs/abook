@@ -30,7 +30,7 @@
 ## The data pipeline
 
 <!-- Sharding, tokenization at scale, streaming; connects to
-     `src/thebook/tokenizer.py` and the training loop. -->
+     `src/abook/tokenizer.py` and the training loop. -->
 
 ## Exercises {.unnumbered}
 
